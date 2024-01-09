@@ -1,11 +1,10 @@
 import React from "react";
 import { BookList } from "../Components/BookList";
 import { useSelector, useDispatch } from "react-redux";
-import { setBooks } from "../redux/BooksReducer";
-import { resetBooks } from "../redux/BooksReducer";
+import { setBooks, resetBooks } from "../redux/BooksReducer";
+
 export const Home = () => {
   const books = useSelector((state) => state.books);
-  const prev = books;
   const dispatch = useDispatch();
 
   const sortBookByReleaseDate = () => {

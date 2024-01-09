@@ -150,7 +150,7 @@ export const BookList = (props) => {
                 value={editedReleaseDate}
                 onChange={(e) => setEditedReleaseDate(e.target.value)}
                 placeholder="Release date"
-                type="text"
+                type="number"
                 className="d-block ms-3"
               />
               <button

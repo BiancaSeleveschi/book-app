@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { books } from "./Data";
-import { act } from "react-dom/test-utils";
 
 const booksSlice = createSlice({
   name: "books",
@@ -25,7 +24,7 @@ const booksSlice = createSlice({
     editBook: (state, action) => {
       const editedBook = action.payload;
       return books.map((b) =>
-        b.id === action.payload.id
+        b.id === editedBook.id
           ? {
               ...b,
               title: editedBook.title,
